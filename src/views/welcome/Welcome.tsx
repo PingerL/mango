@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import s from "../welcome/Welcome.module.scss";
+import s from "./Welcome.module.scss";
 import logo from "../../assets/logo.svg";
 import { RouterView } from "vue-router";
 
@@ -12,8 +12,11 @@ export const Welcome = defineComponent({
           <h1>芒果记账</h1>
         </header>
         <main class={s.main}>
-          <RouterView />
+          <RouterView name="main" />
         </main>
+        <footer>
+          <RouterView name="footer" />
+        </footer>
       </div>
     );
   },

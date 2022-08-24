@@ -1,8 +1,12 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { First } from "../views/welcome/components/First";
+import { FirstActions } from "../views/welcome/components/FirstActions";
 import { Fourth } from "../views/welcome/components/Fourth";
+import { FourthActions } from "../views/welcome/components/FourthActions";
 import { Second } from "../views/welcome/components/Second";
+import { SecondActions } from "../views/welcome/components/SecondActions";
 import { Third } from "../views/welcome/components/Third";
+import { ThirdActions } from "../views/welcome/components/ThirdActions";
 import { Welcome } from "../views/welcome/Welcome";
 const routes = [
   { path: "/", redirect: "/welcome" },
@@ -11,10 +15,10 @@ const routes = [
     component: Welcome,
     children: [
       { path: "", redirect: "/welcome/1" },
-      { path: "1", component: First },
-      { path: "2", component: Second },
-      { path: "3", component: Third },
-      { path: "4", component: Fourth },
+      { path: "1", components: { main: First, footer: FirstActions } },
+      { path: "2", components: { main: Second, footer: SecondActions } },
+      { path: "3", components: { main: Third, footer: ThirdActions } },
+      { path: "4", components: { main: Fourth, footer: FourthActions } },
     ],
   },
 ];
