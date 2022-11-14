@@ -1,0 +1,8 @@
+.button {
+  height: var(--button-height);
+  color: var(--button-text-color);
+  background: var(--button-bg);
+  border: 1px solid var(--button-bg);
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--button-box-shadow);
+}

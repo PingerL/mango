@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import { StartPage } from "../views/start/StartPage";
 import { First } from "../views/welcome/components/First";
 import { FirstActions } from "../views/welcome/components/FirstActions";
 import { Fourth } from "../views/welcome/components/Fourth";
@@ -21,6 +22,7 @@ const routes = [
       { path: "4", components: { main: Fourth, footer: FourthActions } },
     ],
   },
+  {path: '/start', component: StartPage}
 ];
 
 const router = createRouter({
