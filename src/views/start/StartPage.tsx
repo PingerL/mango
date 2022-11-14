@@ -1,9 +1,11 @@
 import { defineComponent } from 'vue';
 import { Button } from '../../shared/button/Button';
 import { FloatButton } from '../../shared/float_button/FloatButton';
-import pig from '../../assets/pig.svg'
+import pig from '../../assets/pig.svg';
+import menu from '../../assets/menu.svg';
 import s from './StartPage.module.scss';
 import { Center } from '../../shared/center/Center';
+import { Navbar } from '../../shared/navbar/Navbar';
 export const StartPage = defineComponent({
      setup: (props, content) => {
       const onClick = () => {
@@ -12,7 +14,12 @@ export const StartPage = defineComponent({
       }
        return () => (
          <div class={s.page}>
-          <nav>menu</nav>
+          <Navbar>{
+            {
+              default: '山竹记账',
+              icon: <img src= {menu} class={s.navIcon} />
+            }  
+          }</Navbar>
           <Center class={s.pig_wrapper}>
             <img src={pig} class={s.pig}/>
           </Center>
